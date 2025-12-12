@@ -44,28 +44,6 @@
             box-shadow: 0 8px 20px rgba(139,69,19,0.3);
         }
         
-        .back-to-wedding-only {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            background: rgba(13,90,66,0.9);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            z-index: 1000;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .back-to-wedding-only:hover {
-            background: #0d5a42;
-            transform: translateX(-3px);
-        }
-        
         .valima-title {
             color: #8B4513;
             font-family: 'Playfair Display', serif;
@@ -99,13 +77,30 @@
             color: #8B4513;
             margin-right: 10px;
         }
+        
+        .back-to-wedding-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 35px;
+            background: #0d5a42;
+            color: white;
+            border: 3px solid #0d5a42;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .back-to-wedding-btn:hover {
+            background: #1a7a5a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(13,90,66,0.3);
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation back to Wedding-only invitation -->
-    <a href="https://aafat8781.github.io/wedding-invitation/" class="back-to-wedding-only">
-        <i class="fas fa-home"></i> Wedding Only
-    </a>
     
     <div class="card invitation-card">
         <div class="header">
@@ -193,13 +188,13 @@
             
             <!-- Button to View Valima -->
             <button class="view-valima-btn" onclick="showValima()">
-                <i class="fas fa-crown"></i> You are also invited to Valima Reception
+                <i class="fas fa-crown"></i> Valima Ceremony Details
             </button>
             
             <!-- VALIMA SECTION (Initially hidden) -->
             <div id="valima-section" class="valima-section">
                 <h3 class="valima-title">
-                    <i class="fas fa-crown"></i> VALIMA RECEPTION
+                    <i class="fas fa-crown"></i> VALIMA CEREMONY
                 </h3>
                 
                 <div class="valima-date">
@@ -211,7 +206,7 @@
                     <div style="display: flex; align-items: center; margin: 15px 0;">
                         <i class="fas fa-clock valima-icon"></i>
                         <div>
-                            <div style="font-weight: bold; color: #8B4513;">EVENING RECEPTION</div>
+                            <div style="font-weight: bold; color: #8B4513;">EVENING CEREMONY</div>
                             <div>7:00 PM onwards</div>
                         </div>
                     </div>
@@ -239,7 +234,7 @@
                 <!-- Hosted By -->
                 <div style="text-align: center; margin: 25px 0; padding: 15px; background: rgba(139,69,19,0.1); border-radius: 10px;">
                     <div style="font-weight: bold; color: #8B4513;">Hosted with love by</div>
-                    <div style="font-size: 1.3rem; color: #8B4513;">Mrs. & Mr. Mohammed Yousuf</div>
+                    <div style="font-size: 1.3rem; color: #8B4513;">Mr. & Mrs. Mohammed Yousuf</div>
                     <div style="color: #666; font-size: 0.9rem;">(Groom's Parents)</div>
                 </div>
                 
@@ -253,12 +248,10 @@
                     </p>
                 </div>
                 
-                <!-- Back to Top Button -->
-                <div style="text-align: center; margin-top: 30px;">
-                    <button class="view-valima-btn" onclick="scrollToTop()" style="background: #0d5a42; border-color: #0d5a42;">
-                        <i class="fas fa-arrow-up"></i> Back to Wedding Details
-                    </button>
-                </div>
+                <!-- Back to Wedding Details Button -->
+                <button class="back-to-wedding-btn" onclick="scrollToTop()">
+                    <i class="fas fa-arrow-up"></i> Back to Wedding Details
+                </button>
             </div>
             
             <!-- Final Note -->
@@ -291,14 +284,14 @@
             
             // Reset button
             setTimeout(() => {
-                document.querySelector('.view-valima-btn').innerHTML = '<i class="fas fa-crown"></i> You are also invited to Valima Reception';
+                document.querySelector('.view-valima-btn').innerHTML = '<i class="fas fa-crown"></i> Valima Ceremony Details';
                 document.querySelector('.view-valima-btn').style.background = '#8B4513';
                 document.querySelector('.view-valima-btn').onclick = showValima;
             }, 500);
         }
         
         document.addEventListener('DOMContentLoaded', function() {
-            console.log(`%c🎊 Wedding & Valima Invitation %c\nOriginal beautiful wedding invitation with added Valima details`, 
+            console.log(`%c🎊 Wedding & Valima Invitation %c\nComplete wedding invitation with Valima ceremony details`, 
                 'color: #0d5a42; font-size: 14px; font-weight: bold;',
                 'color: #8B4513; font-size: 12px;');
         });
