@@ -3,91 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding & Valima Invitation - Syeda Fareeha Ahmed & Mohammad Saif</title>
+    <title>Wedding & Valima Invitation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Combined Invitation Styles */
-        .combined-card {
-            border: 10px solid #8B4513;
-            background: linear-gradient(135deg, #fffaf0 0%, #fff5ee 100%);
-        }
-        
-        .combined-card::before {
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="50%" y="50%" font-family="Arial" font-size="14" fill="rgba(139,69,19,0.05)" text-anchor="middle" dominant-baseline="middle">☪ ﷲ</text></svg>');
-            background-size: 120px;
-        }
-        
-        .wedding-section {
+        /* Simplified styling */
+        .invitation-card {
+            border: 10px solid #0d5a42;
             background: white;
-            border: 3px solid #0d5a42;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 30px 0;
-            position: relative;
         }
         
         .valima-section {
             background: white;
-            border: 3px solid #8B4513;
+            border: 5px solid #8B4513;
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px;
             margin: 40px 0 30px 0;
-            position: relative;
-        }
-        
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid;
-        }
-        
-        .wedding-title {
-            color: #0d5a42;
-            border-bottom-color: #0d5a42;
-        }
-        
-        .valima-title {
-            color: #8B4513;
-            border-bottom-color: #8B4513;
-        }
-        
-        .date-highlight {
-            background: linear-gradient(135deg, #0d5a42 0%, #1a7a5a 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: inline-block;
-            font-size: 1.8rem;
-            box-shadow: 0 5px 15px rgba(13,90,66,0.3);
-        }
-        
-        .valima-date-highlight {
-            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: inline-block;
-            font-size: 1.8rem;
-            box-shadow: 0 5px 15px rgba(139,69,19,0.3);
+            display: none;
         }
         
         .view-valima-btn {
-            display: inline-block;
-            margin: 30px auto;
+            display: block;
+            margin: 40px auto;
             padding: 15px 40px;
             background: #8B4513;
             color: white;
             border: 3px solid #8B4513;
             border-radius: 50px;
             font-weight: bold;
-            text-decoration: none;
             font-size: 1.3rem;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -104,7 +48,7 @@
             position: fixed;
             top: 20px;
             left: 20px;
-            background: rgba(139,69,19,0.9);
+            background: rgba(13,90,66,0.9);
             color: white;
             padding: 10px 20px;
             border-radius: 50px;
@@ -118,252 +62,214 @@
         }
         
         .back-to-wedding-only:hover {
-            background: #8B4513;
+            background: #0d5a42;
             transform: translateX(-3px);
         }
         
-        .wedding-icon {
-            color: #0d5a42;
+        .valima-title {
+            color: #8B4513;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #8B4513;
+        }
+        
+        .valima-date {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: inline-block;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(139,69,19,0.3);
+            text-align: center;
+        }
+        
+        .valima-details {
+            text-align: left;
+            padding: 0 20px;
+            font-size: 1.2rem;
+            line-height: 1.8;
         }
         
         .valima-icon {
             color: #8B4513;
-        }
-        
-        .divider {
-            text-align: center;
-            margin: 40px 0;
-            position: relative;
-        }
-        
-        .divider-line {
-            height: 2px;
-            background: linear-gradient(to right, transparent, #8B4513, transparent);
-            margin: 20px 0;
-        }
-        
-        .divider-text {
-            background: white;
-            padding: 0 20px;
-            color: #8B4513;
-            font-size: 1.5rem;
-            font-style: italic;
-            position: relative;
-            z-index: 1;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
     <!-- Navigation back to Wedding-only invitation -->
     <a href="https://aafat8781.github.io/wedding-invitation/" class="back-to-wedding-only">
-        <i class="fas fa-gift"></i> Wedding Only Invitation
+        <i class="fas fa-home"></i> Wedding Only
     </a>
     
-    <div class="card combined-card">
+    <div class="card invitation-card">
         <div class="header">
-            <h1>Wedding & Valima Invitation</h1>
+            <h1>Wedding Invitation</h1>
             <p>بسم الله الرحمن الرحيم</p>
             <p>In the name of Allah, the Most Gracious, the Most Merciful</p>
         </div>
         
         <div class="content">
             <div style="background: rgba(13,90,66,0.1); padding: 15px; border-radius: 10px; margin: 20px 0;">
-                <h2>WITH THE BLESSINGS OF ALLAH ALMIGHTY</h2>
-                <h3>AND THE GRACE OF THE HOLY PROPHET (صلى الله عليه وسلم)</h3>
+                <h2>WITH THE BLESSINGS OF ALLAH</h2>
+                <h3>AND THE GRACE OF THE PROPHET (صلى الله عليه وسلم)</h3>
             </div>
             
-            <h2 style="font-family: 'Playfair Display'; font-size: 2rem; color: #8B4513;">YOU ARE HONORABLY INVITED</h2>
-            <p>On the auspicious occasions of Wedding & Valima of</p>
+            <h2 style="font-family: 'Playfair Display'; font-size: 2rem; color: #0d5a42;">YOU ARE CORDIALLY INVITED</h2>
+            <p>On the marriage of our daughter</p>
             
             <div class="couple">
                 <div class="bride">Syeda Fareeha Ahmed</div>
-                <div style="font-size: 1.3rem; color: #D2691E; margin: 15px 0;">&</div>
+                <div style="font-size: 1.3rem; color: gold; margin: 15px 0;">with</div>
                 <div class="groom">Mohammad Saif</div>
-                <p style="color: #666;">Now united in the bond of Nikah</p>
+                <p>Son of Mohammed Yousuf Sahab</p>
             </div>
             
-            <!-- COMPLETE WEDDING INVITATION SECTION -->
-            <div class="wedding-section">
-                <h3 class="section-title wedding-title">
-                    <i class="fas fa-mosque"></i> MARRIAGE (NIKAH) CEREMONY
-                </h3>
+            <!-- Wedding Details in Original Format -->
+            <div class="event">
+                <h3><i class="fas fa-mosque"></i> MARRIAGE (NIKAH) CEREMONY</h3>
                 
-                <div class="date-highlight">
+                <div style="font-size: 1.6rem; color: #b8860b; margin: 10px 0; font-weight: bold;">
                     SUNDAY, 21ST DECEMBER 2025
                 </div>
-                
-                <div style="color: #1a7a5a; font-style: italic; font-size: 1.2rem; margin-bottom: 20px;">
+                <div style="color: #1a7a5a; font-style: italic; margin-bottom: 20px;">
                     1st Rajab-ul-Murajjab 1447 Hijri
                 </div>
                 
-                <div style="text-align: left; padding: 0 20px;">
-                    <div style="display: flex; align-items: center; margin: 15px 0;">
-                        <i class="fas fa-map-marker-alt wedding-icon"></i>
-                        <div>
-                            <div style="font-weight: bold; color: #0d5a42;">Aqd in Masjid-e-Ahmed</div>
-                            <div>Ahmed Nagar, Sangareddy</div>
-                        </div>
-                    </div>
+                <div style="text-align: left; margin-top: 20px;">
+                    <div style="font-weight: bold; color: #0d5a42; margin-top: 15px;">Nikah at:</div>
+                    <div>Masjid-e-Ahmed</div>
+                    <div>Ahmed Nagar, Sangareddy</div>
                     
-                    <div style="display: flex; align-items: center; margin: 15px 0;">
-                        <i class="fas fa-clock wedding-icon"></i>
-                        <div>
-                            <div style="color: #b8860b; font-weight: bold;">After Isha (8:00 PM)</div>
-                        </div>
-                    </div>
+                    <div style="color: #b8860b; font-weight: bold; margin-top: 15px;">After Isha (8:00 PM)</div>
                     
-                    <div style="display: flex; align-items: flex-start; margin: 20px 0;">
-                        <i class="fas fa-utensils wedding-icon"></i>
-                        <div>
-                            <div style="font-weight: bold; color: #0d5a42;">Dinner Venue:</div>
-                            <div>King's Palace Function Hall</div>
-                            <div>Opp. ITI, Sangareddy</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Hadith -->
-                <div class="hadith-box" style="margin-top: 25px;">
-                    <div class="arabic-text">الزواج من سنتي فمن رغب عن سنتي فليس مني</div>
-                    <p>"Marriage is my Sunnah. Whoever turns away from my Sunnah is not from me." (Hadith)</p>
-                </div>
-                
-                <!-- Parents -->
-                <div class="parents" style="margin: 25px 0; background: rgba(13,90,66,0.1);">
-                    Mrs. & Mr. Syed Ahmeduddin Qadri
-                </div>
-                
-                <!-- Best Compliments -->
-                <div style="background: #0d5a42; padding: 25px; border-radius: 10px; margin: 30px 0; position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: -20px; right: -20px; font-size: 4rem; color: rgba(255,255,255,0.1);">ﷲ</div>
-                    <div style="font-family: 'Great Vibes'; font-size: 2.5rem; color: gold; position: relative; z-index: 1;">Best Compliments From:</div>
-                    <div style="font-size: 2rem; color: white; font-weight: bold; position: relative; z-index: 1;">Near & Dear</div>
-                </div>
-                
-                <!-- Final Wedding Blessing -->
-                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd;">
-                    <div class="arabic-text" style="margin-bottom: 15px;">
-                        بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْر
-                    </div>
-                    <p style="font-size: 1.2rem; color: #0d5a42; font-style: italic;">
-                        "May Allah bless you and shower His blessings upon you and unite you in goodness."
-                    </p>
+                    <div style="font-weight: bold; color: #0d5a42; margin-top: 20px;">Venue for Dinner:</div>
+                    <div>King's Palace Function Hall</div>
+                    <div>Opp. ITI, Sangareddy</div>
                 </div>
             </div>
             
-            <!-- DIVIDER with Button to View Valima -->
-            <div class="divider">
-                <div class="divider-line"></div>
-                <div class="divider-text">You are also invited to the Valima Reception</div>
-                <button class="view-valima-btn" onclick="scrollToValima()">
-                    <i class="fas fa-crown"></i> View Valima Invitation
-                </button>
+            <!-- Quran Verse & Hadith -->
+            <div style="background: rgba(13,90,66,0.08); padding: 20px; border-radius: 10px; margin: 25px 0; font-style: italic; border-left: 5px solid #0d5a42;">
+                <div style="font-family: 'Traditional Arabic'; font-size: 1.5rem; color: #0d5a42; margin-bottom: 10px;">
+                    وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                </div>
+                <p style="color: #0d5a42;">"And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy..." (Quran 30:21)</p>
             </div>
             
-            <!-- VALIMA INVITATION SECTION (Initially hidden) -->
+            <div class="hadith-box">
+                <div class="arabic-text">الزواج من سنتي فمن رغب عن سنتي فليس مني</div>
+                <p>"Marriage is my Sunnah. Whoever turns away from my Sunnah is not from me." (Hadith)</p>
+            </div>
+            
+            <div style="font-size: 1.3rem; color: #0d5a42; margin: 25px 0; font-weight: bold; line-height: 1.8; text-align: center;">
+                WE SINCERELY REQUEST YOUR PRESENCE AND PRAYERS<br>
+                TO BLESS THE NEW BEGINNING OF THE COUPLE
+            </div>
+            
+            <!-- Parents -->
+            <div class="parents">Mrs. & Mr. Syed Ahmeduddin Qadri</div>
+            
+            <!-- Best Compliments -->
+            <div style="background: #0d5a42; padding: 25px; border-radius: 10px; margin: 30px 0; position: relative; overflow: hidden;">
+                <div style="font-family: 'Great Vibes'; font-size: 2.5rem; color: gold; position: relative; z-index: 1;">Best Compliments From:</div>
+                <div style="font-size: 2rem; color: white; font-weight: bold; position: relative; z-index: 1;">Near & Dear</div>
+            </div>
+            
+            <!-- Final Blessing -->
+            <div style="margin-top: 30px; padding-top: 25px; border-top: 2px solid #ddd;">
+                <div class="arabic-text" style="margin-bottom: 15px; font-size: 2rem;">
+                    بَارَكَ اللهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْر
+                </div>
+                <p style="font-size: 1.2rem; color: #0d5a42; font-style: italic; line-height: 1.6;">
+                    "May Allah bless you and shower His blessings upon you and unite you in goodness."
+                </p>
+            </div>
+            
+            <!-- Button to View Valima -->
+            <button class="view-valima-btn" onclick="showValima()">
+                <i class="fas fa-crown"></i> You are also invited to Valima Reception
+            </button>
+            
+            <!-- VALIMA SECTION (Initially hidden) -->
             <div id="valima-section" class="valima-section">
-                <h3 class="section-title valima-title">
+                <h3 class="valima-title">
                     <i class="fas fa-crown"></i> VALIMA RECEPTION
                 </h3>
                 
-                <div class="valima-date-highlight">
-                    MONDAY, 22ND DECEMBER 2025
+                <div class="valima-date">
+                    MONDAY, 22ND DECEMBER 2025<br>
+                    <span style="font-size: 1.2rem;">2nd Rajab-ul-Murajjab 1447 Hijri</span>
                 </div>
                 
-                <div style="color: #A0522D; font-style: italic; font-size: 1.2rem; margin-bottom: 20px;">
-                    2nd Rajab-ul-Murajjab 1447 Hijri
-                </div>
-                
-                <div style="text-align: left; padding: 0 20px;">
+                <div class="valima-details">
                     <div style="display: flex; align-items: center; margin: 15px 0;">
                         <i class="fas fa-clock valima-icon"></i>
                         <div>
-                            <div style="color: #D2691E; font-weight: bold; font-size: 1.3rem;">EVENING RECEPTION</div>
-                            <div style="font-weight: bold; color: #8B4513;">7:00 PM onwards</div>
+                            <div style="font-weight: bold; color: #8B4513;">EVENING RECEPTION</div>
+                            <div>7:00 PM onwards</div>
                         </div>
                     </div>
                     
                     <div style="display: flex; align-items: flex-start; margin: 20px 0;">
                         <i class="fas fa-map-marker-alt valima-icon"></i>
                         <div>
-                            <div style="font-weight: bold; color: #8B4513; font-size: 1.2rem;">VENUE:</div>
-                            <div style="font-size: 1.3rem; font-weight: bold; color: #333;">Royal Grand Palace</div>
+                            <div style="font-weight: bold; color: #8B4513;">VENUE:</div>
+                            <div style="font-size: 1.3rem; font-weight: bold;">Royal Grand Palace</div>
                             <div>Near Madina Circle, Sangareddy</div>
-                            <div style="color: #666; font-size: 0.9rem; margin-top: 5px;">(A/C Banquet Hall)</div>
+                            <div style="color: #666; font-size: 0.9rem;">(A/C Banquet Hall)</div>
                         </div>
                     </div>
-                    
-                    <!-- REMOVED: Dress Code Section -->
-                    <!-- REMOVED: Dinner Menu Section -->
                 </div>
                 
                 <!-- Special Note -->
-                <div style="margin-top: 25px; padding: 20px; background: rgba(255,248,220,0.7); border-radius: 10px; border-left: 4px solid #8B4513;">
-                    <p style="color: #8B4513; text-align: center; font-style: italic; line-height: 1.6;">
-                        <i class="fas fa-star"></i>
-                        This Valima is hosted by the groom's family to celebrate the union and 
-                        express gratitude to Allah. Your presence will add to our joy.
+                <div style="margin-top: 25px; padding: 20px; background: rgba(255,248,220,0.7); border-radius: 10px; text-align: center;">
+                    <p style="color: #8B4513; font-style: italic; line-height: 1.6;">
+                        <i class="fas fa-star valima-icon"></i>
+                        This Valima is hosted by the groom's family to celebrate the union.
+                        Your presence will honor us and complete our celebrations.
                     </p>
                 </div>
                 
                 <!-- Hosted By -->
-                <div class="parents" style="margin: 25px 0; background: rgba(139,69,19,0.1); color: #8B4513;">
-                    Hosted with love by<br>
-                    <span style="font-size: 1.3rem;">Mr. & Mrs. Mohammed Yousuf</span><br>
-                    <span style="font-size: 1rem; color: #666;">(Groom's Parents)</span>
+                <div style="text-align: center; margin: 25px 0; padding: 15px; background: rgba(139,69,19,0.1); border-radius: 10px;">
+                    <div style="font-weight: bold; color: #8B4513;">Hosted with love by</div>
+                    <div style="font-size: 1.3rem; color: #8B4513;">Mr. & Mrs. Mohammed Yousuf</div>
+                    <div style="color: #666; font-size: 0.9rem;">(Groom's Parents)</div>
                 </div>
                 
                 <!-- Valima Blessing -->
-                <div style="margin-top: 25px; padding: 20px; background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%); border-radius: 10px;">
-                    <div style="font-family: 'Traditional Arabic'; font-size: 1.8rem; color: white; margin-bottom: 15px; text-align: center;">
-                        رَبِّ هَبْ لِي مِن لَّدُنْكَ ذُرِّيَّةً طَيِّبَةً إِنَّكَ سَمِيعُ الدُّعَاءِ
+                <div style="margin-top: 25px; padding: 20px; background: rgba(139,69,19,0.1); border-radius: 10px;">
+                    <div style="font-family: 'Traditional Arabic'; font-size: 1.5rem; color: #8B4513; margin-bottom: 10px; text-align: center;">
+                        رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا
                     </div>
-                    <p style="color: #FFD700; text-align: center; font-style: italic;">
-                        "My Lord, grant me from Yourself a good offspring. Indeed, You are the Hearer of supplication." 
-                        (Quran 3:38)
+                    <p style="color: #8B4513; text-align: center; font-style: italic;">
+                        "Our Lord, grant us from among our wives and offspring comfort to our eyes and make us an example for the righteous." (Quran 25:74)
                     </p>
                 </div>
                 
-                <!-- Back to Wedding Button -->
+                <!-- Back to Top Button -->
                 <div style="text-align: center; margin-top: 30px;">
-                    <button class="view-valima-btn" onclick="scrollToWedding()" style="background: #0d5a42; border-color: #0d5a42;">
+                    <button class="view-valima-btn" onclick="scrollToTop()" style="background: #0d5a42; border-color: #0d5a42;">
                         <i class="fas fa-arrow-up"></i> Back to Wedding Details
                     </button>
                 </div>
             </div>
             
-            <!-- REMOVED: Kindly Confirm Your Attendance Section -->
-            <!-- REMOVED: All contact information sections -->
-            
-            <!-- Final Joint Blessing -->
-            <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #D2B48C;">
-                <div style="font-size: 1.3rem; color: #8B4513; margin: 20px 0; font-weight: bold; line-height: 1.6; text-align: center;">
-                    WE HUMBLY REQUEST YOUR PRESENCE AND PRAYERS<br>
-                    TO BLESS THE NEWLY MARRIED COUPLE
-                </div>
-                
-                <div class="arabic-text" style="margin: 25px 0; text-align: center;">
-                    جَزَاكُمُ اللهُ خَيْرًا وَبَارَكَ فِيكُمْ
-                </div>
-                <p style="font-size: 1.2rem; color: #666; text-align: center; font-style: italic;">
-                    May Allah reward you with goodness and bless you
-                </p>
+            <!-- Final Note -->
+            <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; color: #666; font-size: 0.9rem;">
+                <p><i class="fas fa-hands-praying" style="color: #0d5a42;"></i> Your gracious presence and prayers are humbly requested</p>
             </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initially hide Valima section
-            document.getElementById('valima-section').style.display = 'none';
-            
-            // Console greeting
-            console.log(`%c🎊 Wedding & Valima Combined Invitation %c\nComplete wedding details followed by valima invitation`, 
-                'color: #8B4513; font-size: 14px; font-weight: bold;',
-                'color: #0d5a42; font-size: 12px;');
-        });
-        
-        function scrollToValima() {
+        function showValima() {
             const valimaSection = document.getElementById('valima-section');
             valimaSection.style.display = 'block';
             valimaSection.scrollIntoView({ 
@@ -372,28 +278,30 @@
             });
             
             // Change button text
-            document.querySelector('.view-valima-btn').innerHTML = '<i class="fas fa-check"></i> Viewing Valima Invitation';
+            document.querySelector('.view-valima-btn').innerHTML = '<i class="fas fa-check"></i> Viewing Valima Details';
             document.querySelector('.view-valima-btn').style.background = '#A0522D';
+            document.querySelector('.view-valima-btn').onclick = null;
         }
         
-        function scrollToWedding() {
-            const weddingSection = document.querySelector('.wedding-section');
-            weddingSection.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
             
-            // Reset Valima button
-            document.querySelector('.view-valima-btn').innerHTML = '<i class="fas fa-crown"></i> View Valima Invitation';
-            document.querySelector('.view-valima-btn').style.background = '#8B4513';
-        }
-        
-        // Optional: Auto-scroll to Valima if URL has hash
-        if (window.location.hash === '#valima') {
+            // Reset button
             setTimeout(() => {
-                scrollToValima();
+                document.querySelector('.view-valima-btn').innerHTML = '<i class="fas fa-crown"></i> You are also invited to Valima Reception';
+                document.querySelector('.view-valima-btn').style.background = '#8B4513';
+                document.querySelector('.view-valima-btn').onclick = showValima;
             }, 500);
         }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log(`%c🎊 Wedding & Valima Invitation %c\nOriginal beautiful wedding invitation with added Valima details`, 
+                'color: #0d5a42; font-size: 14px; font-weight: bold;',
+                'color: #8B4513; font-size: 12px;');
+        });
     </script>
 </body>
 </html>
